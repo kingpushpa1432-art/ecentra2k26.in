@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Left Sidebar -->
+        <aside class="sidebar-left">
+            <img src="Images/Ecentra logo.jpeg" alt="ECENTRA Logo" class="ecentra-logo">
+            <a href="#home" class="sidebar-item active" onclick="showSection('home')">
+                <i class="fas fa-home"></i>
+                <span>HOME</span>
+            </a>
+            <a href="#workshops" class="sidebar-item" onclick="showSection('workshops')">
+                <i class="fas fa-laptop-code"></i>
+                <span>WORKSHOPS</span>
+            </a>
+            <a href="#events" class="sidebar-item" onclick="showSection('events')">
+                <i class="fas fa-calendar-alt"></i>
+                <span>EVENTS</span>
+            </a>
+            <a href="#contact" class="sidebar-item" onclick="showSection('contact')">
+                <i class="fas fa-headset"></i>
+                <span>HELP DESK</span>
+            </a>
+            <a href="#about" class="sidebar-item" onclick="showSection('about')">
+                <i class="fas fa-user-friends"></i>
+                <span>ABOUT US</span>
+            </a>
+            <a href="#sponsors" class="sidebar-item" onclick="showSection('sponsors')">
+                <i class="fas fa-handshake"></i>
+                <span>SPONSORS</span>
+            </a>
+
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Video Background -->
+            <video autoplay muted loop id="bg-video">
+                <source src="Images/Video_Ready_and_Provided.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay"></div>
+
+            <!-- Top Navigation -->
+            <nav class="top-nav">
+                <ul class="nav-links">
+                    <li><a href="#"></a></li>
+                    <li><a href="#" onclick="showSection('workshops')">WORKSHOPS</a></li>
+                    <li><a href="#" onclick="showSection('events')">COMPETITIONS</a></li>
+                </ul>
+
+            </nav>
+
+            <!-- Content -->
+            <div class="content-wrapper">
+                <!-- Home Hero Section -->
+                <div id="home-section" class="home-hero">
+
+                    <img src="Images/logo.jpeg" alt="College Logo" class="home-logo">
+
+                    <div class="pro-dashboard-card">
+                        <h4 class="college-name">JNTU-GV College of Engineering Vizianagaram (A)</h4>
+                        <h5 class="dept-name">Department of ECE Presents</h5>
+                        <h1 class="pro-title">ECENTRA 2K26</h1>
+                        <div class="pro-divider"></div>
+                        <p class="tagline">A National Level Technical Symposium</p>
+                    </div>
+                </div>
+
+                <!-- Workshops Section -->
+                <div class="workshops-container" id="workshops-section" style="display: none;">
+                    <h2 class="section-title">WORKSHOPS</h2>
+                    <div class="workshops-grid">
+                        <!-- Workshop 1 -->
+                        <div class="cyberpunk-card">
+                            <div class="cp-decoration-top-left"></div>
+                            <div class="cp-decoration-bottom-right"></div>
+
+                            <div class="cp-sidebar">
+                                <span>WORKSHOP</span>
+                            </div>
+
+                            <div class="cp-main">
+                                <h3 class="cp-title">Foundational ML to Advanced GenAI</h3>
+
+                                <div class="cp-image-border">
+                                    <div class="cp-image-container">
+                                        <img src="Images/ML & GenAi.jpeg" alt="ML & GenAI">
+                                    </div>
+                                </div>
+
+                                <div class="cp-actions">
+                                    <a href="https://forms.gle/8q5ouJB4TX7Yuh5S8" target="_blank"
+                                        class="cp-btn register">REGISTER</a>
+                                    <button class="cp-btn explore" onclick="toggleWorkshop(this)">EXPLORE</button>
+                                </div>
+
+                                <div class="cp-footer">
+                                    <div class="cp-price-group">
+                                        <span class="price-label">Price</span>
+                                        <span class="current-price">₹400</span>
+                                        <span class="original-price">₹600</span>
+                                    </div>
+                                </div>
+
+                                <div class="workshop-expandable" style="display: none;">
+                                    <p class="workshop-moto">From basics to building intelligent systems</p>
+                                    <p class="workshop-desc">A hands-on workshop covering machine learning fundamentals
+                                        and advanced generative AI concepts with real-world insights.</p>
+                                    <div class="workshop-details">
+                                        <p><strong>Venue:</strong> Online (Microsoft Teams App)</p>
+                                        <p><strong>By:</strong> Viswam.ai company from IIITH college (Hyderabad)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Workshop 2 -->
+                        <div class="cyberpunk-card">
+                            <div class="cp-decoration-top-left"></div>
+                            <div class="cp-decoration-bottom-right"></div>
+
+                            <div class="cp-sidebar">
+                                <span>WORKSHOP</span>
+                            </div>
+
+                            <div class="cp-main">
+                                <h3 class="cp-title">VLSI Design Flow and FPGA Implementation</h3>
+
+                                <div class="cp-image-border">
+                                    <div class="cp-image-container">
+                                        <img src="Images/VLSI.jpeg" alt="VLSI">
+                                    </div>
+                                </div>
+
+                                <div class="cp-actions">
+                                    <a href="https://forms.gle/pW8Vq6NhnKfje7z67" target="_blank"
+                                        class="cp-btn register">REGISTER</a>
+                                    <button class="cp-btn explore" onclick="toggleWorkshop(this)">EXPLORE</button>
+                                </div>
+
+                                <div class="cp-footer">
+                                    <div class="cp-price-group">
+                                        <span class="price-label">Price</span>
+                                        <span class="current-price">₹500</span>
+                                        <span class="original-price">₹700</span>
+                                    </div>
+                                </div>
+
+                                <div class="workshop-expandable" style="display: none;">
+                                    <p class="workshop-moto">Turning ideas into silicon</p>
+                                    <p class="workshop-desc">An in-depth session on VLSI and FPGA design flow, bridging
+                                        theory with practical implementation.</p>
+                                    <div class="workshop-details">
+                                        <p><strong>Venue:</strong> AB2, JNTU-GV</p>
+                                        <p><strong>By:</strong> Bablu Sir ( proffessor of jntu gv)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Workshop 3 -->
+                        <div class="cyberpunk-card">
+                            <div class="cp-decoration-top-left"></div>
+                            <div class="cp-decoration-bottom-right"></div>
+
+                            <div class="cp-sidebar">
+                                <span>WORKSHOP</span>
+                            </div>
+
+                            <div class="cp-main">
+                                <h3 class="cp-title">PCB Design</h3>
+
+                                <div class="cp-image-border">
+                                    <div class="cp-image-container">
+                                        <img src="Images/PCB design.jpeg" alt="PCB Design">
+                                    </div>
+                                </div>
+
+                                <div class="cp-actions">
+                                    <a href="https://forms.gle/ABD6yhdALmoBXAxB9" target="_blank"
+                                        class="cp-btn register">REGISTER</a>
+                                    <button class="cp-btn explore" onclick="toggleWorkshop(this)">EXPLORE</button>
+                                </div>
+
+                                <div class="cp-footer">
+                                    <div class="cp-price-group">
+                                        <span class="price-label">Price</span>
+                                        <span class="current-price">₹550</span>
+                                        <span class="original-price">₹800</span>
+                                    </div>
+                                </div>
+
+                                <div class="workshop-expandable" style="display: none;">
+                                    <p class="workshop-moto">Design it right from the board</p>
+                                    <p class="workshop-desc">A practical workshop focused on PCB design concepts, tools,
+                                        and industry best practices.</p>
+                                    <div class="workshop-details">
+                                        <p><strong>Venue:</strong> AB2,JNTU-GV</p>
+                                        <p><strong>By:</strong> Visishta company from guntur</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Workshop 4 -->
+                        <div class="cyberpunk-card">
+                            <div class="cp-decoration-top-left"></div>
+                            <div class="cp-decoration-bottom-right"></div>
+
+                            <div class="cp-sidebar">
+                                <span>WORKSHOP</span>
+                            </div>
+
+                            <div class="cp-main">
+                                <h3 class="cp-title">Embedded Systems and IoT</h3>
+
+                                <div class="cp-image-border">
+                                    <div class="cp-image-container">
+                                        <img src="Images/Iot & Embedded.jpeg" alt="IoT">
+                                    </div>
+                                </div>
+
+                                <div class="cp-actions">
+                                    <a href="https://forms.gle/dU4FdyBkevucyLh49" target="_blank"
+                                        class="cp-btn register">REGISTER</a>
+                                    <button class="cp-btn explore" onclick="toggleWorkshop(this)">EXPLORE</button>
+                                </div>
+
+                                <div class="cp-footer">
+                                    <div class="cp-price-group">
+                                        <span class="price-label">Price</span>
+                                        <span class="current-price">₹700</span>
+                                        <span class="original-price">₹900</span>
+                                    </div>
+                                </div>
+
+                                <div class="workshop-expandable" style="display: none;">
+                                    <p class="workshop-moto">Connecting hardware to the smart world</p>
+                                    <p class="workshop-desc">An introductory workshop on embedded systems and IoT
+                                        applications with real-time use cases.</p>
+                                    <div class="workshop-details">
+                                        <p><strong>Venue:</strong>AB2, JNTU-GV</p>
+                                        <p><strong>By:</strong> Visishta company from guntur.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Workshop 5 -->
+                        <div class="cyberpunk-card">
+                            <div class="cp-decoration-top-left"></div>
+                            <div class="cp-decoration-bottom-right"></div>
+
+                            <div class="cp-sidebar">
+                                <span>WORKSHOP</span>
+                            </div>
+
+                            <div class="cp-main">
+                                <h3 class="cp-title">Cybersecurity</h3>
+
+                                <div class="cp-image-border">
+                                    <div class="cp-image-container">
+                                        <img src="Images/cyber security.jpeg" alt="Cybersecurity">
+                                    </div>
+                                </div>
+
+                                <div class="cp-actions">
+                                    <a href="https://forms.gle/q5mT6vt9RJChrafKA" target="_blank"
+                                        class="cp-btn register">REGISTER</a>
+                                    <button class="cp-btn explore" onclick="toggleWorkshop(this)">EXPLORE</button>
+                                </div>
+
+                                <div class="cp-footer">
+                                    <div class="cp-price-group">
+                                        <span class="price-label">Price</span>
+                                        <span class="current-price">₹700</span>
+                                    </div>
+                                </div>
+
+                                <div class="workshop-expandable" style="display: none;">
+                                    <p class="workshop-moto">Securing the digital world</p>
+                                    <p class="workshop-desc">Covers cybersecurity fundamentals, network security
+                                        concepts, ethical hacking basics, and protection against common cyber threats.
+                                    </p>
+                                    <div class="workshop-details">
+                                        <p><strong>Venue:</strong> AB2, JNTU GV</p>
+                                        <p><strong>By:</strong> supraja technologies</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Combo Workshops Section -->
+                <div class="workshops-container" id="combo-workshops-section" style="display: none;">
+                    <h2 class="section-title">COMBO WORKSHOPS</h2>
+                    <div class="workshops-grid">
+                        <!-- Combo Workshop 1: ML + PCB -->
+                        <div class="cyberpunk-card">
+                            <div class="cp-decoration-top-left"></div>
+                            <div class="cp-decoration-bottom-right"></div>
+
+                            <div class="cp-sidebar">
+                                <span>COMBO</span>
+                            </div>
+
+                            <div class="cp-main">
+                                <h3 class="cp-title">ML + PCB DESIGN</h3>
+
+                                <div class="cp-image-border">
+                                    <div class="cp-image-container">
+                                        <img src="Images/ml+pcb.jpeg" alt="ML + PCB Combo">
+                                    </div>
+                                </div>
+
+                                <div class="cp-actions">
+                                    <a href="https://forms.gle/ZbBDSWR8Vyb5FH5H7" target="_blank"
+                                        class="cp-btn register">REGISTER</a>
+                                    <button class="cp-btn explore" onclick="toggleWorkshop(this)">EXPLORE</button>
+                                </div>
+
+                                <div class="cp-footer">
+                                    <div class="cp-price-group">
+                                        <span class="price-label">Price</span>
+                                        <span class="current-price">₹850</span>
+                                        <span class="original-price">₹1200</span>
+                                    </div>
+                                </div>
+
+                                <div class="workshop-expandable" style="display: none;">
+                                    <p class="workshop-moto">AI and Hardware Learning Together</p>
+                                    <p class="workshop-desc">Covers core Machine Learning and Generative AI concepts
+                                        along with PCB design fundamentals, schematic creation, and layout practices.
+                                    </p>
+                                    <div class="workshop-details">
+                                        <p><strong>Venue:</strong> ML – Online (Teams) | PCB – AB2, JNTU-GV</p>
+                                        <p><strong>By:</strong> ML – Viswam.ai (Hyderabad) | PCB – NR Tech Learning Hub
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Combo Workshop 2: ML + VLSI -->
+                        <div class="cyberpunk-card">
+                            <div class="cp-decoration-top-left"></div>
+                            <div class="cp-decoration-bottom-right"></div>
+
+                            <div class="cp-sidebar">
+                                <span>COMBO</span>
+                            </div>
+
+                            <div class="cp-main">
+                                <h3 class="cp-title">ML + VLSI & FPGA</h3>
+
+                                <div class="cp-image-border">
+                                    <div class="cp-image-container">
+                                        <img src="Images/ml+vlsi.jpeg" alt="ML + VLSI Combo">
+                                    </div>
+                                </div>
+
+                                <div class="cp-actions">
+                                    <a href="https://forms.gle/9RcTe1aemNKSmvkQA" target="_blank"
+                                        class="cp-btn register">REGISTER</a>
+                                    <button class="cp-btn explore" onclick="toggleWorkshop(this)">EXPLORE</button>
+                                </div>
+
+                                <div class="cp-footer">
+                                    <div class="cp-price-group">
+                                        <span class="price-label">Price</span>
+                                        <span class="current-price">₹800</span>
+                                        <span class="original-price">₹1100</span>
+                                    </div>
+                                </div>
+
+                                <div class="workshop-expandable" style="display: none;">
+                                    <p class="workshop-moto">AI with Chip Design</p>
+                                    <p class="workshop-desc">Covers Machine Learning and GenAI fundamentals along with
+                                        VLSI design flow concepts and FPGA implementation.</p>
+                                    <div class="workshop-details">
+                                        <p><strong>Venue:</strong> ML – Online (Teams) | VLSI – AB2, JNTU-GV</p>
+                                        <p><strong>By:</strong> ML – Viswam.ai (Hyderabad) | VLSI – Bablu Sir (JNTU-GV)
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Combo Workshop 3: ML + IoT -->
+                        <div class="cyberpunk-card">
+                            <div class="cp-decoration-top-left"></div>
+                            <div class="cp-decoration-bottom-right"></div>
+
+                            <div class="cp-sidebar">
+                                <span>COMBO</span>
+                            </div>
+
+                            <div class="cp-main">
+                                <h3 class="cp-title">ML + EMBEDDED & IOT</h3>
+
+                                <div class="cp-image-border">
+                                    <div class="cp-image-container">
+                                        <img src="Images/ml+Iot.jpeg" alt="ML + IoT Combo">
+                                    </div>
+                                </div>
+
+                                <div class="cp-actions">
+                                    <a href="https://forms.gle/T5r22faJKcNQU6A16" target="_blank"
+                                        class="cp-btn register">REGISTER</a>
+                                    <button class="cp-btn explore" onclick="toggleWorkshop(this)">EXPLORE</button>
+                                </div>
+
+                                <div class="cp-footer">
+                                    <div class="cp-price-group">
+                                        <span class="price-label">Price</span>
+                                        <span class="current-price">₹900</span>
+                                        <span class="original-price">₹1300</span>
+                                    </div>
+                                </div>
+
+                                <div class="workshop-expandable" style="display: none;">
+                                    <p class="workshop-moto">AI for Smart Systems</p>
+                                    <p class="workshop-desc">Covers AI fundamentals along with embedded systems concepts
+                                        and IoT applications.</p>
+                                    <div class="workshop-details">
+                                        <p><strong>Venue:</strong> ML – Online (Teams) | IoT – AB2, JNTU-GV</p>
+                                        <p><strong>By:</strong> ML – Viswam.ai (Hyderabad) | IoT – Visishta (Guntur)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Combo Workshop 4: ML + Cybersecurity -->
+                        <div class="cyberpunk-card">
+                            <div class="cp-decoration-top-left"></div>
+                            <div class="cp-decoration-bottom-right"></div>
+
+                            <div class="cp-sidebar">
+                                <span>COMBO</span>
+                            </div>
+
+                            <div class="cp-main">
+                                <h3 class="cp-title">ML + CYBERSECURITY</h3>
+
+                                <div class="cp-image-border">
+                                    <div class="cp-image-container">
+                                        <img src="Images/GenAI + Cybersecurity.jpeg" alt="ML + Cybersecurity Combo">
+                                    </div>
+                                </div>
+
+                                <div class="cp-actions">
+                                    <a href="https://forms.gle/2HunbiSnYaqK7JuPA" target="_blank"
+                                        class="cp-btn register">REGISTER</a>
+                                    <button class="cp-btn explore" onclick="toggleWorkshop(this)">EXPLORE</button>
+                                </div>
+
+                                <div class="cp-footer">
+                                    <div class="cp-price-group">
+                                        <span class="price-label">Price</span>
+                                        <span class="current-price">₹900</span>
+                                        <span class="original-price">₹1300</span>
+                                    </div>
+                                </div>
+
+                                <div class="workshop-expandable" style="display: none;">
+                                    <p class="workshop-moto">Intelligent Systems with Secure Foundations</p>
+                                    <p class="workshop-desc">Covers Machine Learning and Generative AI fundamentals
+                                        along with cybersecurity concepts including network security, ethical hacking
+                                        basics, and cyber threat protection.</p>
+                                    <div class="workshop-details">
+                                        <p><strong>Venue:</strong> Online (Microsoft Teams)</p>
+                                        <p><strong>By:</strong> ML – Viswam.ai (Hyderabad) | Cybersecurity – Supraja
+                                            Technologies</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Events Section -->
+                <div class="events-container" id="events-section" style="display: none;">
+                    <h2 class="section-title">EVENTS</h2>
+
+                    <div class="event-category">
+                        <h3 class="category-title">TECHNICAL</h3>
+                        <div class="events-grid">
+                            <!-- Event 1 -->
+                            <div class="cyberpunk-card">
+                                <div class="cp-decoration-top-left"></div>
+                                <div class="cp-decoration-bottom-right"></div>
+
+                                <div class="cp-sidebar">
+                                    <span>EVENT</span>
+                                </div>
+
+                                <div class="cp-main">
+                                    <h3 class="cp-title">MEDTECH EXPO!</h3>
+
+                                    <div class="cp-image-border">
+                                        <div class="cp-image-container">
+                                            <img src="Images/Medtech expo.jpeg" alt="MEDTECH EXPO">
+                                        </div>
+                                    </div>
+
+                                    <div class="cp-actions">
+                                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfWLjzs9ExM6obYt10o1TW__cbI6vibiuGRKS3kOJprSwTLPQ/viewform?usp=publish-editor"
+                                            target="_blank" class="cp-btn register">REGISTER</a>
+                                        <button class="cp-btn explore" onclick="toggleEvent(this)">EXPLORE</button>
+                                    </div>
+
+                                    <div class="cp-footer">
+                                        <div class="cp-price-group">
+                                            <span class="price-label">Price</span>
+                                            <span class="current-price">₹100</span>
+                                            <span class="original-price">₹150</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="event-expandable" style="display: none;">
+                                        <p class="event-desc">Our event is based on participants project related to
+                                            different fields (Technical and Medical) and research projects in front of
+                                            professor and other students.</p>
+                                        <div class="event-details">
+                                            <p><strong>Fee:</strong> 2 Members: 100/- | 3 Members: 150/- | 4 Members:
+                                                200/-</p>
+                                            <p><strong>Prize:</strong> Prize & JNTUGV Certificate</p>
+                                            <p><strong>Contact:</strong> Avinash (8008232248)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Event 2 -->
+                            <div class="cyberpunk-card">
+                                <div class="cp-decoration-top-left"></div>
+                                <div class="cp-decoration-bottom-right"></div>
+
+                                <div class="cp-sidebar">
+                                    <span>EVENT</span>
+                                </div>
+
+                                <div class="cp-main">
+                                    <h3 class="cp-title">SLIDESYNC!</h3>
+
+                                    <div class="cp-image-border">
+                                        <div class="cp-image-container">
+                                            <img src="Images/Slide sync.jpeg" alt="SLIDESYNC">
+                                        </div>
+                                    </div>
+
+                                    <div class="cp-actions">
+                                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc9hj1aGoCmmKaBl-3jbxcWJE_gKrgA7evBrHaZW0o3f3ZakA/viewform?usp=publish-editor"
+                                            target="_blank" class="cp-btn register">REGISTER</a>
+                                        <button class="cp-btn explore" onclick="toggleEvent(this)">EXPLORE</button>
+                                    </div>
+
+                                    <div class="cp-footer">
+                                        <div class="cp-price-group">
+                                            <span class="price-label">Price</span>
+                                            <span class="current-price">₹100</span>
+                                            <span class="original-price">₹150</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="event-expandable" style="display: none;">
+                                        <p class="event-desc">Visual way of presentation the information on trending
+                                            topics related to different fields (Technical and Medical).</p>
+                                        <div class="event-details">
+                                            <p><strong>Fee:</strong> Single: 100/- | Double: 150/-</p>
+                                            <p><strong>Prize:</strong> Prize & JNTUGV Certificate</p>
+                                            <p><strong>Contact:</strong> Avinash (8008232248)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Event 3 -->
+                            <div class="cyberpunk-card">
+                                <div class="cp-decoration-top-left"></div>
+                                <div class="cp-decoration-bottom-right"></div>
+
+                                <div class="cp-sidebar">
+                                    <span>EVENT</span>
+                                </div>
+
+                                <div class="cp-main">
+                                    <h3 class="cp-title">Think IQ!</h3>
+
+                                    <div class="cp-image-border">
+                                        <div class="cp-image-container">
+                                            <img src="Images/Think IQ.jpeg" alt="Think IQ">
+                                        </div>
+                                    </div>
+
+                                    <div class="cp-actions">
+                                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc-psXwVjm79fH8LB4EDPW6UFa4n_w9dO3YYV7u_r02y1Hb1A/viewform?usp=publish-editor"
+                                            target="_blank" class="cp-btn register">REGISTER</a>
+                                        <button class="cp-btn explore" onclick="toggleEvent(this)">EXPLORE</button>
+                                    </div>
+
+                                    <div class="cp-footer">
+                                        <div class="cp-price-group">
+                                            <span class="price-label">Price</span>
+                                            <span class="current-price">₹50</span>
+                                            <span class="original-price">₹80</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="event-expandable" style="display: none;">
+                                        <p class="event-desc">General knowledge, aptitude, physics, chemistry. Quiz
+                                            included with two rounds.</p>
+                                        <div class="event-details">
+                                            <p><strong>Fee:</strong> Single: 50/- | Double: 90/- | Triple: 120/-</p>
+                                            <p><strong>Prize:</strong> Prize & JNTUGV Certificate</p>
+                                            <p><strong>Contact:</strong> Avinash (8008232248)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Event 4 -->
+                            <div class="cyberpunk-card">
+                                <div class="cp-decoration-top-left"></div>
+                                <div class="cp-decoration-bottom-right"></div>
+
+                                <div class="cp-sidebar">
+                                    <span>EVENT</span>
+                                </div>
+
+                                <div class="cp-main">
+                                    <h3 class="cp-title">Blind circuit build!</h3>
+
+                                    <div class="cp-image-border">
+                                        <div class="cp-image-container">
+                                            <img src="Images/Build Circuit build.jpeg" alt="Blind circuit build">
+                                        </div>
+                                    </div>
+
+                                    <div class="cp-actions">
+                                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd-go7BGgdFUSlCj-tku9HABIRbnRtdF5AVXrKY5RWUK6dQag/viewform?usp=publish-editor"
+                                            target="_blank" class="cp-btn register">REGISTER</a>
+                                        <button class="cp-btn explore" onclick="toggleEvent(this)">EXPLORE</button>
+                                    </div>
+
+                                    <div class="cp-footer">
+                                        <div class="cp-price-group">
+                                            <span class="price-label">Price</span>
+                                            <span class="current-price">₹50</span>
+                                            <span class="original-price">₹80</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="event-expandable" style="display: none;">
+                                        <p class="event-desc">Identifying components and correctly connecting them to
+                                            complete a working circuit. Two rounds (2nd is fun round finding component
+                                            names).</p>
+                                        <div class="event-details">
+                                            <p><strong>Fee:</strong> Single: 50/- | Double: 80/- | Triple: 120/-</p>
+                                            <p><strong>Prize:</strong> Prize & JNTUGV Certificate</p>
+                                            <p><strong>Contact:</strong> Avinash (8008232248)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Event 5 -->
+                            <div class="cyberpunk-card">
+                                <div class="cp-decoration-top-left"></div>
+                                <div class="cp-decoration-bottom-right"></div>
+
+                                <div class="cp-sidebar">
+                                    <span>EVENT</span>
+                                </div>
+
+                                <div class="cp-main">
+                                    <h3 class="cp-title">Logic ladder!</h3>
+
+                                    <div class="cp-image-border">
+                                        <div class="cp-image-container">
+                                            <img src="Images/Logic ladder.jpeg" alt="Logic ladder">
+                                        </div>
+                                    </div>
+
+                                    <div class="cp-actions">
+                                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdsA_4rTYmGRqrRdH5eyScuwYdH9bkgGc4YlaNklaV_g_3-VA/viewform?usp=publish-editor"
+                                            target="_blank" class="cp-btn register">REGISTER</a>
+                                        <button class="cp-btn explore" onclick="toggleEvent(this)">EXPLORE</button>
+                                    </div>
+
+                                    <div class="cp-footer">
+                                        <div class="cp-price-group">
+                                            <span class="price-label">Price</span>
+                                            <span class="current-price">₹100</span>
+                                            <span class="original-price">₹150</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="event-expandable" style="display: none;">
+                                        <p class="event-desc">Solving questions displayed on screen (logic gates). If
+                                            the answer is correct the participants will get the chance to roll the dice
+                                            and move forward according to it on the snake and ladder board.</p>
+                                        <div class="event-details">
+                                            <p><strong>Fee:</strong> 2 Members: 100/- | 3 Members: 120/- | 4 Members:
+                                                160/-</p>
+                                            <p><strong>Prize:</strong> Prize & JNTUGV Certificate</p>
+                                            <p><strong>Contact:</strong> Avinash (8008232248)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="event-category">
+                        <h3 class="category-title">NON-TECHNICAL</h3>
+                        <div class="events-grid">
+                            <!-- Event 1: Selfie Hunt -->
+                            <div class="cyberpunk-card">
+                                <div class="cp-decoration-top-left"></div>
+                                <div class="cp-decoration-bottom-right"></div>
+                                <div class="cp-sidebar"><span>EVENT</span></div>
+                                <div class="cp-main">
+                                    <h3 class="cp-title">SELFIE HUNT</h3>
+                                    <div class="cp-image-border">
+                                        <div class="cp-image-container">
+                                            <img src="Images/Selfie Hunter.jpeg" alt="Selfie Hunt">
+                                        </div>
+                                    </div>
+                                    <div class="cp-actions">
+                                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfzj3RwYuHHFGU4UcSe5yfzxrNaNbGnOvOvhMOrOhAaoQ0wWg/viewform?usp=publish-editor"
+                                            target="_blank" class="cp-btn register">REGISTER</a>
+                                        <button class="cp-btn explore" onclick="toggleEvent(this)">EXPLORE</button>
+                                    </div>
+                                    <div class="cp-footer">
+                                        <div class="cp-price-group">
+                                            <span class="price-label">Price</span>
+                                            <span class="current-price">₹50</span>
+                                        </div>
+                                    </div>
+                                    <div class="event-expandable" style="display: none;">
+                                        <p class="event-desc">This is a fun and energetic team game, where Participants
+                                            must Quickly find specific items and take Selfies with them within a given
+                                            time limit.</p>
+                                        <div class="event-details">
+                                            <p><strong>Fee:</strong> Single: ₹50 | Double: ₹100 | Quad: ₹150</p>
+                                            <ul class="event-list">
+                                                <li>After the time ends, everyone returns and shows their selfies to the
+                                                    host.</li>
+                                                <li>The one who finds the most items within the given time will be the
+                                                    winner!</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Event 2: Rubix Cube -->
+                            <div class="cyberpunk-card">
+                                <div class="cp-decoration-top-left"></div>
+                                <div class="cp-decoration-bottom-right"></div>
+                                <div class="cp-sidebar"><span>EVENT</span></div>
+                                <div class="cp-main">
+                                    <h3 class="cp-title">RUBIX CUBE</h3>
+                                    <div class="cp-image-border">
+                                        <div class="cp-image-container">
+                                            <img src="Images/Rubix cube.jpeg" alt="Rubix Cube">
+                                        </div>
+                                    </div>
+                                    <div class="cp-actions">
+                                        <a href="https://forms.gle/Z98RDKiuSUM9yX6U7" target="_blank"
+                                            class="cp-btn register">REGISTER</a>
+                                        <button class="cp-btn explore" onclick="toggleEvent(this)">EXPLORE</button>
+                                    </div>
+                                    <div class="cp-footer">
+                                        <div class="cp-price-group">
+                                            <span class="price-label">Price</span>
+                                            <span class="current-price">₹50</span>
+                                        </div>
+                                    </div>
+                                    <div class="event-expandable" style="display: none;">
+                                        <p class="event-desc">The participant who completes the cube correctly in the
+                                            shortest
+                                            time will win the prize!</p>
+                                        <div class="event-details">
+                                            <p><strong>Fee:</strong> Per Person: ₹50</p>
+                                            <h4 class="rules-subtitle">Basic Rules:</h4>
+                                            <ul class="event-list">
+                                                <li>The cube will be scrambled before the start.</li>
+                                                <li>Participants must not use any external help.</li>
+                                                <li>The first person to solve the cube correctly wins.</li>
+                                                <li>Judges' decision will be final.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Event 3: Concept Canvas -->
+                            <div class="cyberpunk-card">
+                                <div class="cp-decoration-top-left"></div>
+                                <div class="cp-decoration-bottom-right"></div>
+                                <div class="cp-sidebar"><span>EVENT</span></div>
+                                <div class="cp-main">
+                                    <h3 class="cp-title">CONCEPT CANVAS</h3>
+                                    <div class="cp-image-border">
+                                        <div class="cp-image-container">
+                                            <img src="Images/Concept canvas.jpeg" alt="Concept Canvas">
+                                        </div>
+                                    </div>
+                                    <div class="cp-actions">
+                                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc8glQyl4y_G94VWrDJD3qK4s5t_MASRs2Qj0edfR-711o6Yw/viewform?usp=dialog"
+                                            target="_blank" class="cp-btn register">REGISTER</a>
+                                        <button class="cp-btn explore" onclick="toggleEvent(this)">EXPLORE</button>
+                                    </div>
+                                    <div class="cp-footer">
+                                        <div class="cp-price-group">
+                                            <span class="price-label">Price</span>
+                                            <span class="current-price">₹100</span>
+                                        </div>
+                                    </div>
+                                    <div class="event-expandable" style="display: none;">
+                                        <p class="event-desc">Concept Canvas is an exciting team-based Pictionary game
+                                            where drawing leads to victory.</p>
+                                        <div class="event-details">
+                                            <p><strong>Fee:</strong> Two Members: ₹100</p>
+                                            <ul class="event-list">
+                                                <li>One teammate chooses a slip from the box containing words or movie
+                                                    names.</li>
+                                                <li>They must explain the word by drawing on the board without speaking.
+                                                </li>
+                                                <li>The teammate who guesses correctly earns a point for their team.
+                                                </li>
+                                                <li>The team with the highest score at the end wins the prize!</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Event 4: Cric Zone -->
+                            <div class="cyberpunk-card">
+                                <div class="cp-decoration-top-left"></div>
+                                <div class="cp-decoration-bottom-right"></div>
+                                <div class="cp-sidebar"><span>EVENT</span></div>
+                                <div class="cp-main">
+                                    <h3 class="cp-title">CRIC ZONE</h3>
+                                    <div class="cp-image-border">
+                                        <div class="cp-image-container">
+                                            <img src="Images/Cric Zone.jpeg" alt="Cric Zone">
+                                        </div>
+                                    </div>
+                                    <div class="cp-actions">
+                                        <a href="https://forms.gle/Rq43cDXYwYuHHfbT6" target="_blank"
+                                            class="cp-btn register">REGISTER</a>
+                                        <button class="cp-btn explore" onclick="toggleEvent(this)">EXPLORE</button>
+                                    </div>
+                                    <div class="cp-footer">
+                                        <div class="cp-price-group">
+                                            <span class="price-label">Price</span>
+                                            <span class="current-price">₹50</span>
+                                        </div>
+                                    </div>
+                                    <div class="event-expandable" style="display: none;">
+                                        <p class="event-desc">Cric Zone is a competitive quiz designed to test your deep
+                                            knowledge of cricket—from history and records to T20 formats and recent
+                                            updates.</p>
+                                        <div class="event-details">
+                                            <p><strong>Fee:</strong> Single: ₹50 | Double: ₹80</p>
+                                            <ul class="event-list">
+                                                <li>Questions range from basic facts to advanced statistics and
+                                                    match-related scenarios.</li>
+                                                <li>Answer accurately within a specified time limit to score points.
+                                                </li>
+                                                <li>The participant with the highest total points is declared the
+                                                    winner!</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Event 5: Cine Challenge -->
+                            <div class="cyberpunk-card">
+                                <div class="cp-decoration-top-left"></div>
+                                <div class="cp-decoration-bottom-right"></div>
+                                <div class="cp-sidebar"><span>EVENT</span></div>
+                                <div class="cp-main">
+                                    <h3 class="cp-title">CINE CHALLENGE</h3>
+                                    <div class="cp-image-border">
+                                        <div class="cp-image-container">
+                                            <img src="Images/Cine Challenge.jpeg" alt="Cine Challenge">
+                                        </div>
+                                    </div>
+                                    <div class="cp-actions">
+                                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfKJYHXpFolMlmszs3-FvUDewspPyoiWusvaJwRdTvu5egTKw/viewform?usp=publish-editor"
+                                            target="_blank" class="cp-btn register">REGISTER</a>
+                                        <button class="cp-btn explore" onclick="toggleEvent(this)">EXPLORE</button>
+                                    </div>
+                                    <div class="cp-footer">
+                                        <div class="cp-price-group">
+                                            <span class="price-label">Price</span>
+                                            <span class="current-price">₹50</span>
+                                        </div>
+                                    </div>
+                                    <div class="event-expandable" style="display: none;">
+                                        <p class="event-desc">Cine Challenge is the ultimate movie quiz testing your
+                                            understanding of actors, dialogues, and iconic scenes.</p>
+                                        <div class="event-details">
+                                            <p><strong>Fee:</strong> Single: ₹50 | Double: ₹80</p>
+                                            <ul class="event-list">
+                                                <li><strong>Emoji Clues:</strong> Identify titles or themes represented
+                                                    by emojis.</li>
+                                                <li><strong>Music Bounds:</strong> Recognize scores or popular songs
+                                                    from the film.</li>
+                                                <li><strong>Scene Clips:</strong> Guess the movie from short, mystery
+                                                    clips.</li>
+                                                <li>Analyze the clues and identifies the highest number of movies to
+                                                    win!</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Event 6: Campus Clicks -->
+                            <div class="cyberpunk-card">
+                                <div class="cp-decoration-top-left"></div>
+                                <div class="cp-decoration-bottom-right"></div>
+                                <div class="cp-sidebar"><span>EVENT</span></div>
+                                <div class="cp-main">
+                                    <h3 class="cp-title">CAMPUS CLICKS</h3>
+                                    <div class="cp-image-border">
+                                        <div class="cp-image-container">
+                                            <img src="Images/Campus clicks.jpeg" alt="Campus Clicks">
+                                        </div>
+                                    </div>
+                                    <div class="cp-actions">
+                                        <a href="https://docs.google.com/forms/d/e/1FAIpQLScQtQnPxcDEdLcEBMxgiFN83eyTbYFRRx7v6ngtrL_YCOEhHA/viewform?usp=publish-editor"
+                                            target="_blank" class="cp-btn register">REGISTER</a>
+                                        <button class="cp-btn explore" onclick="toggleEvent(this)">EXPLORE</button>
+                                    </div>
+                                    <div class="cp-footer">
+                                        <div class="cp-price-group">
+                                            <span class="price-label">Price</span>
+                                            <span class="current-price">₹30</span>
+                                        </div>
+                                    </div>
+                                    <div class="event-expandable" style="display: none;">
+                                        <p class="event-desc">Campus Clicks is a creative photography-based game
+                                            conducted within the JNTUGV college campus. This game encourages
+                                            participants to explore their surroundings and capture the beauty, moments,
+                                            and unique perspectives of campus life through photography.</p>
+                                        <div class="event-details">
+                                            <p><strong>Fee:</strong> ₹30</p>
+                                            <p>In this game, participants are required to take an original photograph
+                                                anywhere around the college campus. The photo can focus on nature,
+                                                buildings, student life, events, or any visually appealing scene within
+                                                the campus premises. After taking the photograph, participants must
+                                                submit their entry through the provided online link within the given
+                                                time limit.</p>
+                                            <p>All submitted photographs are reviewed by the organizers or a judging
+                                                panel. The photos are evaluated based on creativity, clarity,
+                                                composition, originality, and overall visual impact. After careful
+                                                evaluation, the best photograph is selected.</p>
+                                            <p>The participant who submits the best photo is declared the winner and is
+                                                awarded the prize money.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Event 7: Like to Win -->
+                            <div class="cyberpunk-card">
+                                <div class="cp-decoration-top-left"></div>
+                                <div class="cp-decoration-bottom-right"></div>
+                                <div class="cp-sidebar"><span>EVENT</span></div>
+                                <div class="cp-main">
+                                    <h3 class="cp-title">LIKE TO WIN</h3>
+                                    <div class="cp-image-border">
+                                        <div class="cp-image-container">
+                                            <img src="Images/Like to win.jpeg" alt="Like to Win">
+                                        </div>
+                                    </div>
+                                    <div class="cp-actions">
+                                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd3eJi64n9Ha0Dids15jX8jWuACADVtAxG4sNmtylRYe2y_HA/viewform?usp=publish-editor"
+                                            target="_blank" class="cp-btn register">REGISTER</a>
+                                        <button class="cp-btn explore" onclick="toggleEvent(this)">EXPLORE</button>
+                                    </div>
+                                    <div class="cp-footer">
+                                        <div class="cp-price-group">
+                                            <span class="price-label">Price</span>
+                                            <span class="current-price">₹50</span>
+                                        </div>
+                                    </div>
+                                    <div class="event-expandable" style="display: none;">
+                                        <p class="event-desc">Like to Win is an interactive photography contest where
+                                            creativity meets social media engagement.</p>
+                                        <div class="event-details">
+                                            <p><strong>Fee:</strong> Per Person: ₹50</p>
+                                            <ul class="event-list">
+                                                <li>Capture an original photograph based on the given theme or location
+                                                    (e.g., college campus).</li>
+                                                <li>Submit your entry to organizers; selected photos will be posted on
+                                                    the host's official Instagram.</li>
+                                                <li>Once posted, the contest is open to the public for likes.</li>
+                                                <li>The photograph with the highest number of likes within the specified
+                                                    period wins!</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Event 8: Free Fire Room -->
+                            <div class="cyberpunk-card">
+                                <div class="cp-decoration-top-left"></div>
+                                <div class="cp-decoration-bottom-right"></div>
+                                <div class="cp-sidebar"><span>EVENT</span></div>
+                                <div class="cp-main">
+                                    <h3 class="cp-title">FREE FIRE ROOM</h3>
+                                    <div class="cp-image-border">
+                                        <div class="cp-image-container">
+                                            <img src="Images/Free Fire.jpeg" alt="Free Fire">
+                                        </div>
+                                    </div>
+                                    <div class="cp-actions">
+                                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfuv5Zg9yG6nHOfigegreuaZpdjWalpBl6e6LyoaJm90w37nA/viewform?usp=publish-editor"
+                                            target="_blank" class="cp-btn register">REGISTER</a>
+                                        <button class="cp-btn explore" onclick="toggleEvent(this)">EXPLORE</button>
+                                    </div>
+                                    <div class="cp-footer">
+                                        <div class="cp-price-group">
+                                            <span class="price-label">Price</span>
+                                            <span class="current-price">₹200</span>
+                                        </div>
+                                    </div>
+                                    <div class="event-expandable" style="display: none;">
+                                        <p class="event-desc">Free Fire Room Match is an intense battle royale event for
+                                            squads who love high-stakes competitive gaming.</p>
+                                        <div class="event-details">
+                                            <p><strong>Fee:</strong> Per Squad: ₹200</p>
+                                            <ul class="event-list">
+                                                <li>Squads compete in a custom Free Fire room with standard rules and
+                                                    fair play guidelines.</li>
+                                                <li>Strategize, communicate, and stay inside the safe zone to eliminate
+                                                    opponents.</li>
+                                                <li>Use of hacks, unfair practices, or rule violations leads to
+                                                    immediate disqualification.</li>
+                                                <li>The final squad standing to secure the "Booyah" is the winner!</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Event 9: PUBG Room -->
+                            <div class="cyberpunk-card">
+                                <div class="cp-decoration-top-left"></div>
+                                <div class="cp-decoration-bottom-right"></div>
+                                <div class="cp-sidebar"><span>EVENT</span></div>
+                                <div class="cp-main">
+                                    <h3 class="cp-title">PUBG ROOM</h3>
+                                    <div class="cp-image-border">
+                                        <div class="cp-image-container">
+                                            <img src="Images/Pubg.jpeg" alt="PUBG Room">
+                                        </div>
+                                    </div>
+                                    <div class="cp-actions">
+                                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSez3P2PKSI-Vlh1htsZ89xhCAl9pflpNhP9x84DFYLRK9moNQ/viewform?usp=publish-editor"
+                                            target="_blank" class="cp-btn register">REGISTER</a>
+                                        <button class="cp-btn explore" onclick="toggleEvent(this)">EXPLORE</button>
+                                    </div>
+                                    <div class="cp-footer">
+                                        <div class="cp-price-group">
+                                            <span class="price-label">Price</span>
+                                            <span class="current-price">₹200</span>
+                                        </div>
+                                    </div>
+                                    <div class="event-expandable" style="display: none;">
+                                        <p class="event-desc">PUBG Room Match offers intense battle royale action in
+                                            custom rooms created and managed by our organizers.</p>
+                                        <div class="event-details">
+                                            <p><strong>Fee:</strong> Per Squad: ₹200</p>
+                                            <ul class="event-list">
+                                                <li>Players land strategically, collect resources, and coordinate as a
+                                                    squad to eliminate opponents.</li>
+                                                <li>Fair play is mandatory; hacks, glitches, or teaming results in
+                                                    disqualification.</li>
+                                                <li>Survive within the safe zone and outplay all other squads.</li>
+                                                <li>The last squad standing to secure the "Winner Winner Chicken Dinner"
+                                                    wins!</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Section -->
+                <div class="contact-container" id="contact-section" style="display: none;">
+                    <div class="help-desk-header">
+                        <h2 class="help-desk-title">Help Desk</h2>
+                    </div>
+                    <div class="help-desk-categories">
+                        <div class="contact-category">
+                            <h3 class="category-title">STUDENT COORDINATORS</h3>
+                            <div class="contact-grid">
+                                <div class="contact-card">
+                                    <h3 class="cp-title">SURYA PRATHAP JNTV</h3>
+                                    <p class="contact-role">Student Coordinator</p>
+                                    <a href="tel:+917396185671" class="contact-btn">
+                                        <i class="fas fa-phone-alt"></i> +91 7396 185 671
+                                    </a>
+                                </div>
+                                <div class="contact-card">
+                                    <h3 class="cp-title">TEJASWINI JNTV</h3>
+                                    <p class="contact-role">Student Coordinator</p>
+                                    <a href="tel:+919381542324" class="contact-btn">
+                                        <i class="fas fa-phone-alt"></i> +91 93815 42324
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-category">
+                            <h3 class="category-title">FEST COORDINATORS</h3>
+                            <div class="contact-grid">
+                                <div class="contact-card">
+                                    <h3 class="cp-title">K.KARTHIK</h3>
+                                    <a href="tel:+918919645499" class="contact-btn">
+                                        <i class="fas fa-phone-alt"></i> +91 89196 45499
+                                    </a>
+                                </div>
+                                <div class="contact-card">
+                                    <h3 class="cp-title">V.KISHOR</h3>
+                                    <a href="tel:+919492335288" class="contact-btn">
+                                        <i class="fas fa-phone-alt"></i> +91 94923 35288
+                                    </a>
+                                </div>
+                                <div class="contact-card">
+                                    <h3 class="cp-title">G.HARSHITHA</h3>
+                                    <a href="tel:+916300635539" class="contact-btn">
+                                        <i class="fas fa-phone-alt"></i> +91 63006 35539
+                                    </a>
+                                </div>
+                                <div class="contact-card">
+                                    <h3 class="cp-title">PRAVALLIKA VASI</h3>
+                                    <a href="tel:+919392729524" class="contact-btn">
+                                        <i class="fas fa-phone-alt"></i> +91 93927 29524
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-category">
+                            <h3 class="category-title">HOSPITALITY COORDINATORS</h3>
+                            <div class="contact-grid">
+                                <div class="contact-card">
+                                    <h3 class="cp-title">S.JOHN</h3>
+                                    <a href="tel:+919963160266" class="contact-btn">
+                                        <i class="fas fa-phone-alt"></i> +91 99631 60266
+                                    </a>
+                                </div>
+                                <div class="contact-card">
+                                    <h3 class="cp-title">V.VINEEL</h3>
+                                    <a href="tel:+917674955688" class="contact-btn">
+                                        <i class="fas fa-phone-alt"></i> +91 76749 55688
+                                    </a>
+                                </div>
+                                <div class="contact-card">
+                                    <h3 class="cp-title">R.NIHARIKA</h3>
+                                    <a href="tel:+917989368442" class="contact-btn">
+                                        <i class="fas fa-phone-alt"></i> +91 79893 68442
+                                    </a>
+                                </div>
+                                <div class="contact-card">
+                                    <h3 class="cp-title">L.SHIVANI</h3>
+                                    <a href="tel:+916305722866" class="contact-btn">
+                                        <i class="fas fa-phone-alt"></i> +91 63057 22866
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sponsors Section -->
+                <div class="sponsors-container" id="sponsors-section" style="display: none;">
+                    <h2 class="section-title">OUR SPONSORS</h2>
+                    <div class="sponsors-grid">
+                        <!-- Sponsor Card Example -->
+                        <div class="sponsor-card">
+                            <div class="sponsor-logo-placeholder">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <h3 class="sponsor-name">Coming Soon</h3>
+                            <p class="sponsor-tier">Title Sponsor</p>
+                        </div>
+                        <div class="sponsor-card">
+                            <div class="sponsor-logo-placeholder">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <h3 class="sponsor-name">Coming Soon</h3>
+                            <p class="sponsor-tier">Associate Sponsor</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About Section -->
+                <div class="about-container" id="about-section" style="display: none;">
+                    <h2 class="section-title">ABOUT US</h2>
+                    <div class="about-text">
+                        <p>
+                            ECENTRA is a platform designed to enable students to showcase their technical talents and
+                            learn new concepts in an effective and engaging manner. It promotes knowledge sharing and
+                            collaborative learning by bringing together a large gathering of students from various
+                            institutions.
+                        </p>
+                        <p>
+                            With a focus on emerging technologies, ECENTRA 2K26 is themed to attract students by
+                            organizing a variety of technical activities at a single venue, including workshops,
+                            technical events, paper presentations, and project expos. The symposium encourages
+                            continuous learning and innovation, evolving progressively year after year.
+                        </p>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </main>
+
+    <!-- Right Sidebar -->
+    <aside class="sidebar-right">
+
+    </aside>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const homeSection = document.getElementById('home-section');
+            const aboutSection = document.getElementById('about-section');
+            const workshopsSection = document.getElementById('workshops-section');
+            const comboWorkshopsSection = document.getElementById('combo-workshops-section');
+            const eventsSection = document.getElementById('events-section');
+            const contactSection = document.getElementById('contact-section');
+            const sponsorsSection = document.getElementById('sponsors-section');
+
+            if (homeSection) homeSection.style.display = 'none';
+            if (aboutSection) aboutSection.style.display = 'none';
+            if (workshopsSection) workshopsSection.style.display = 'none';
+            if (comboWorkshopsSection) comboWorkshopsSection.style.display = 'none';
+            if (eventsSection) eventsSection.style.display = 'none';
+            if (contactSection) contactSection.style.display = 'none';
+            if (sponsorsSection) sponsorsSection.style.display = 'none';
+
+            // Show the selected section
+            if (sectionId === 'workshops') {
+                // Show both regular and combo workshops
+                if (workshopsSection) workshopsSection.style.display = 'flex';
+                if (comboWorkshopsSection) comboWorkshopsSection.style.display = 'flex';
+            } else {
+                const sectionToShow = document.getElementById(sectionId + '-section');
+                if (sectionToShow) {
+                    if (sectionId === 'about' || sectionId === 'home' || sectionId === 'contact' || sectionId === 'sponsors') {
+                        sectionToShow.style.display = 'flex';
+                    } else {
+                        sectionToShow.style.display = 'block';
+                    }
+                }
+            }
+
+            // Update Sidebar Active State
+            const navLinks = document.querySelectorAll('.sidebar-left .sidebar-item');
+            navLinks.forEach(link => link.classList.remove('active'));
+
+            const activeLink = document.querySelector(`.sidebar-left a[href="#${sectionId}"]`);
+            if (activeLink) {
+                activeLink.classList.add('active');
+            }
+        }
+
+        function toggleDrawer(title, contentHTML) {
+            const drawer = document.getElementById('explore-drawer');
+            const overlay = document.getElementById('drawer-overlay');
+            const drawerContent = document.getElementById('drawer-content');
+
+            // Set content
+            drawerContent.innerHTML = `<h2 class="drawer-title">${title}</h2><div class="drawer-body">${contentHTML}</div>`;
+
+            // Show drawer
+            drawer.classList.add('open');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+
+        function closeDrawer() {
+            const drawer = document.getElementById('explore-drawer');
+            const overlay = document.getElementById('drawer-overlay');
+
+            drawer.classList.remove('open');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function toggleWorkshop(button) {
+            let card = button.closest('.cyberpunk-card');
+            if (!card) card = button.closest('.workshop-card');
+
+            const title = card.querySelector('.cp-title').innerText;
+            const expandableSection = card.querySelector('.workshop-expandable');
+
+            if (expandableSection) {
+                toggleDrawer(title, expandableSection.innerHTML);
+            }
+        }
+
+        function toggleEvent(button) {
+            let card = button.closest('.cyberpunk-card');
+            if (!card) card = button.closest('.event-card');
+
+            const title = card.querySelector('.cp-title').innerText;
+            const expandableSection = card.querySelector('.event-expandable');
+
+            if (expandableSection) {
+                toggleDrawer(title, expandableSection.innerHTML);
+            }
+        }
+
+        // Initialize: show home section (hide about/workshops)
+        document.addEventListener('DOMContentLoaded', () => {
+            showSection('home');
+        });
+    </script>
+    <!-- Explore Side Drawer -->
+    <div id="drawer-overlay" class="drawer-overlay" onclick="closeDrawer()"></div>
+    <div id="explore-drawer" class="explore-drawer">
+        <button class="drawer-close-btn" onclick="closeDrawer()"><i class="fas fa-times"></i></button>
+        <div id="drawer-content"></div>
+    </div>
+</body>
+
+</html>
